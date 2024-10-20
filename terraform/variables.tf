@@ -3,10 +3,17 @@ locals {
   project_id = "devops-exam-01"
 }
 
+
+
+variable "kubernetes_name" {
+  type        = string
+  description  = "Please, enter your GKE cluster name"
+}
+
 variable "output" {
   description = "GKE connection string"
   type        = string
-  default     = "TO CONNECT TO KUBERNETES: gcloud container clusters get-credentials <KUBERNETES-NAME> --region europe-west1 --project elastic-support-k8s-dev"
+  default     = "TO CONNECT TO KUBERNETES: gcloud container clusters get-credentials <KUBERNETES-NAME> --region ap-southeast-1 --project devops-exam-01"
 }
 
 variable "email" {

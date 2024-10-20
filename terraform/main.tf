@@ -97,7 +97,7 @@ resource "google_compute_route" "private_ap_southeast1_c" {
 
 # This blocks creates the Kubernetes cluster
 resource "google_container_cluster" "_" {
-  name     = local.project_id
+  name     = var.kubernetes_name
   location = local.region
 
   node_pool {
